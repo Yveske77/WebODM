@@ -13,5 +13,7 @@ services:
     image: opendronemap/nodeodm
     expose:
       - "3000"
+    volumes:
+      - ${WO_PROCESSING_DIR}:/var/www/data:z
     restart: unless-stopped
     oom_score_adj: 500
